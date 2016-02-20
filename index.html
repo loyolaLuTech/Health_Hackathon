@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+ <style>
+ body{
+  }
+  header{ 
+  height: 450px;
+  }
+  #logo{
+  margin: 20px 20px 20px 20px;
+  width: 50px;
+  height: 50px;
+  float: left;
+  }
+  nav{
+  margin-right: 20px;
+  }
+  nav a{
+    display: inline-block;
+	margin-top: 30px;
+    margin-left: 20px;
+    float: right;
+	font-size: 20px;
+	margin-bottom: 30px;
+	font-weight: 700;
+  
+  
+  }
+  .title{
+  padding-top: 20px;  
+  text-align: center;
+  clear: both;
+  font-weight: 700;
+  padding-right: 70px;
+  padding-top: 40px;
+  color: black;
+  }
+  .motto{
+  text-align: center;
+  font-family: 'Tangerine', serif;
+  font-size: 28px;
+  font-weight: 700;
+  padding-right: 70px;
+  padding-bottom: 25px;
+  color: white;
+  }
+  #brag{
+  height: 450px;
+  width: 14000px;
+  background: grey;
+  backgroun-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  }
+  #textforum{
+  left:25%;
+  }
+  
+  #container {
+	display: flex;
+	justify-content: flex-center;
+	flex-wrap: wrap;
+	width: 100vw;
+  }
+  .full-width {
+  width: 100%;
+  }
+  .forty{
+  width: 20%;
+  }
+  .sixty{
+  width: 60%;
+  }
+  #myList{
+     background: #b3b3ff;
+	 color: white;
+	 padding: 20px;
+  }
+  button{
+    left: 70%
+  }
+  footer{
+  height: 180px;
+  position: relative;
+  padding-bottom: 270px;
+  }
+  #copyright{
+  margin-left: 70px;
+  margin-top: 40px;
+  float: left;
+  font-weight: 700;
+  position: absolute;
+  top: 70%;
+  }
+  #contact{
+  font-weight: 700;
+  }
+  footer #socialmedia{
+  clear: both;
+  width: 200px;
+  height: 50px;
+  background: pink;
+  foat: left;
+  margin: 0px 0px 130px 60px;
+  }
+  
+  </style>
+  <script>
+       function postFunction(){
+	   var input = document.getElementById("textforum").value;
+	    var node= document.createElement("LI");
+		var textNode = document.createTextNode(input); 
+		document.getElementById("feed").appendChild(node); 
+	   }
+	
+  </script>
+ </head>
+ <body>
+  <header>
+   <div id="logo"> </div>
+   <nav>
+     <a href="aboutus.php" id ="a1">ABOUT US</a> 
+	 <a href="location.html" id="a2">LOG IN</a>
+	 <a href="order.php" id="a3"> SIGN UP </a>
+	 <a href="menu.php" id="a4">ACCOUNT INFO</a>
+     <a href="index.html" id="a5">HOME</a>
+   </nav>
+   <h1 class="title">MENTAL HEALTH FORUM </h1>
+   <p class="motto"> ONLINE GRROUP THERAPY </p>
+  </header>
+ <div id="container">
+ <div class="full-width">
+ <ul id="myList">
+  
+</ul>
+</div>
+<div class="forty">
+</div>
+<div class="sixty">
+<textarea id = "textforum" rows = "10" cols="60">
+  
+</textarea>
+</div>
+<div class="forty">
+</div>
+<div class="sixty">
+<button onclick="myFunction()">Post</button>
+</div>
+</div>
+<script>
+function myFunction() {
+    var node = document.createElement("LI");
+	var input = document.getElementById("textforum").value;
+    var textnode = document.createTextNode(input);
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node);
+}
+</script> 
+ 
+  <footer>
+   
+   <p id="copyright">2015 COPYRIGHT&#169 ALL RIGHTS RESERVED </p>
+   <div id="contact">
+    <p> MENTAL HEALTH HOTLINE</p>
+	<hr>
+	<p>773-994-0456</p>
+	<hr/>
+	<p>773-343-2316</p>
+   </div>
+   <div id= "socialmedia"> </div>
+  </footer>
+ </body>
+ 
+</html>
